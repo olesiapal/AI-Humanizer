@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0d0d1a;
+  --bg-secondary: #13132a;
+  --bg-card: #1a1a35;
+  --bg-input: #111128;
+  --border: #2a2a50;
+  --accent: #6c63ff;
+  --accent-hover: #7c73ff;
+  --text-primary: #e8e8ff;
+  --text-muted: #8888aa;
+  --success: #22d3a8;
+  --warn: #f59e0b;
+  --error: #f87171;
+  --info: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes scoreBar {
+  from { width: 0; }
+}
+
+.score-bar {
+  animation: scoreBar 0.6s ease-out forwards;
+}
